@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Strings Method</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" 
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" 
+        crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>WesBos ES6 <small>Strings Method</small></h1>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" 
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" 
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" 
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" 
+        crossorigin="anonymous"></script>
+
+  <script>
+    const course = 'RFB2';
+    const flightNumber = '20-AC2018-jZ';
+    const accountNumber = '86564392RVF002';
+
+    const make = 'BMW';
+    const modal = 'x54';
+    const color = 'Royal Blue';
+
+
+    // .startsWith()
+    console.log('startsWith: ', course.startsWith('R'));
+    console.log('startsWith: ', flightNumber.startsWith('AC', 3));
+
+    // .endsWith()
+    console.log('endsWith: ', course.endsWith('2'));
+    console.log('endsWith: ', accountNumber.endsWith('RV', 10));
+
+    // .includes()
+    console.log('includes: ', course.includes('2'));
+    console.log('includes: ', accountNumber.includes('RVs'));
+
+    // .repeat()
+    console.log('repeat: ', make.repeat(5));
+
+
+    function leftPadding(str, length = 20) {
+      return `-> ${' '.repeat(length -str.length)}${str}`;
+    }
+
+    console.log(leftPadding(make));
+    console.log(leftPadding(modal));
+    console.log(leftPadding(color));
+
+  </script>
+  </body>
+</html>
